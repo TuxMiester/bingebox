@@ -1,11 +1,11 @@
 .SignUp {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    background-image: url('/../public/assets/posters/Backgrond_image2.svg');
   }
   
   .tiltImage {
@@ -18,7 +18,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
   }
   
   .sprayPaintImage{
@@ -29,8 +28,3 @@
     opacity: 0.85;
   }
 
-  .nameBox,.signUp_emailBox,.mobileBox,.createPassBox,.confirmPassBox{
-    height:36px;
-    width:374px;
-    border-radius: 10px;
-  }
