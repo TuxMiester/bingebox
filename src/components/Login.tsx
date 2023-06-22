@@ -17,7 +17,9 @@ function Login(){
     const[password,setPassword] = useState(""); //hello@123
 
     useEffect(()=>{
-        console.log(user);
+        if(user.message == 'Successfully logged in!'){
+            window.open("/homepage");
+        }
     },[user])
 
 
@@ -40,7 +42,7 @@ function Login(){
                     setPassword(e.target.value);
                 }}
             /><br/>
-            <button className='text-wrapper'
+            <button
                 onClick={()=>{
                     dispatch(login(
                         {
@@ -48,13 +50,10 @@ function Login(){
                             password:password
                         }
                     ));
-                }}
-            >Login</button>
+                }}><h2>Login</h2></button>
             {
                 (user)?user.name:""
-                
             }
-            {/* {user??user.name} */}
         </div>
     );
 }
