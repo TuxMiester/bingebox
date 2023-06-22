@@ -1,0 +1,88 @@
+.Body {
+    width: 100%;
+    margin-top: -9vh;
+    z-index: 3;
+}
+
+.row {
+    position: inherit;
+    height: min(20vh,30vw);
+    overflow-x: scroll;
+}
+
+.row::-webkit-scrollbar{
+    display: none;
+}
+
+.row-heading {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row-heading span {
+    position: absolute;
+    margin: 0em 2vw;
+    left: 0%;
+    font-size: min(1.2em,3vw);
+    font-weight: 600;
+    color: var(--font-color);
+    text-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.cards-container {
+    position: inherit;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: visible;
+}
+
+.left-card-scroller {
+    position: absolute;
+    display: block;
+    height: min(15vh,22vw);
+    width: 3vw;
+    z-index: 3;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right-card-scroller {
+    position: absolute;
+    left:97vw;
+    height: min(15vh,22vw);
+    width: 3vw;
+    z-index: 3;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.left-card-scroller:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.right-card-scroller:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+
+.card-dummy {
+    width: 30px;
+    visibility: hidden;
+}

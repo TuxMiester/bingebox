@@ -1,17 +1,23 @@
 /* Library import */
 import {useState,useEffect} from 'react';
+import {BrowserRouter as Router,Route, Routes} from 'react-router-dom';
 
-import './css/SignUp.scss';
+/* Dependency import */
+import './css/Homepage.scss';
+
+/* Component import */
+import Main from './Homepage/Main'
+
+/* Asset imports */
 
 
-
-function SignUp(){
+function Homepage(){
 
     return(
-        <div className='SignUp'>
-            Homepage
+        <div className='Homepage'>
+            <Main/>
         </div>
     );
 }
 
-export default SignUp;
+export default Homepage;

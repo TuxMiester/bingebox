@@ -1,0 +1,180 @@
+@import url(colorMaster.css);
+
+.Navbar {
+    position: fixed;
+    height: 8vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 10%, rgba(20,20,20,0.7) 100%);
+    min-height: 40px;
+    max-height: 150px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: background-color 0.6s ease;
+    z-index: 2;
+}
+
+.Navbar-moving {
+    background-color: #141414;
+}
+
+
+.Logo-navbar-container {
+
+    margin-left: 4vw;
+    height: 90%;
+    overflow:hidden ;
+}
+
+.Logo-navbar{
+    height: 100%;
+}
+
+.Menu-container-navbar {
+    margin: 2em;
+    background:transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.Menu-container-navbar a {
+    text-decoration: none;
+}
+
+.Menu-item-navbar {
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 0.8em;
+    color: var(--font-color);
+  
+}
+
+.Menu-item-navbar a {
+    color: var(--font-color);
+    text-decoration: none;
+   
+}
+
+.Menu-item-active-navbar {
+    font-weight: 600;
+    font-size: 0.9em;
+    
+}
+
+.Right-container-navbar {
+
+    margin-left: auto;
+    margin-right: 4vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Search-navbar {
+    margin: 1em;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: width 0.4s ease-in-out;
+}
+
+.Search-navbar > .MuiSvgIcon-root {
+    font-size: 1.5em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.Search-navbar input {
+    background: transparent;
+    font-size: 1em;
+    outline: none;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.Search-navbar input::placeholder {
+    color: var(--font-color);
+}
+
+.Search-expanded-navbar {
+    background-color: transparent;
+    width: 20vw;
+    max-width: 80%;
+    border: 0px;
+    border-bottom:1px solid var(--font-color);
+    color: var(--font-color);
+}
+
+.Search-hidden-navbar {
+    width: 0px;
+    border: none;
+}
+
+.Avatar-container-navbar {
+    background: transparent;
+    cursor: pointer;
+}
+
+.Avatar-container-navbar > .MuiAvatar-root {
+    background: rgba(255,255,255,0.2);
+    height: 35px !important;
+    width: 37px !important;
+}
+
+.Connect-button-navbar {
+    font-size: 0.8em;
+    display: flex;
+    padding: 0.6em 0.8em;
+    border: 1px solid var(--font-color);
+    border-radius: 10em;
+}
+
+.dropdown-navbar {
+    visibility: hidden;
+    min-width: 13vw;
+    right: 3vw;
+    padding: 1em;
+    margin-top: 1em;
+    background: transparent;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.dropdown-item {
+    font-size: 0.8em;
+    padding: 1em;
+    background: transparent;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    font-weight: 600;
+}
+
+.Avatar-container-navbar:hover .dropdown-navbar{
+    visibility: visible;
+    background-color: var(--bg-color);
+}
+
+@media (max-width:1015px){
+
+    .Navbar {
+        font-size: 10px;
+    }
+
+    .Menu-container-navbar {
+        display: none;
+    }
+
+    .Search-expanded-navbar {
+        width: 40vw;
+    }
+}

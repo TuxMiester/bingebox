@@ -1,0 +1,8 @@
+@import url(colorMaster.css);
+
+.Main {
+	background-image: url("../../../../public/assets/posters/Backgrond_image.png");
+	color: var(--font-color);
+	margin: 0;
+	width: 100vw;
+}
